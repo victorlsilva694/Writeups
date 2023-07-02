@@ -19,7 +19,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9
 
 Connection: close
-![[Pasted image 20230701214042.png]]
+<img src="Pasted image 20230701214042.png">
 
 
 
