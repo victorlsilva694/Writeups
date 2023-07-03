@@ -1,11 +1,9 @@
 
 # Behind the Scenes - HTB write-up
 
-Primeiro fazemos download do executavel.
+Primeiro, fazemos o download do executável.
 
-Colocamos ele na ferramenta ghydra para analisar o decompile do binário.
+Em seguida, colocamos o executável na ferramenta Ghidra para analisar o decompilado do binário.
 
-<img src="GhydraImage.png">
-
-Olhando a função principal, já temos a visão da senha em chars de bytes unicos. Cada byte forma uma parte da senha e unindo todos os bytes
-com uma concatenação basica temos a senha e caputuramos a flag.
+<img src="GhidraImage.png">
+Ao analisar a função principal, podemos observar a senha em caracteres de bytes únicos. Cada byte representa uma parte da senha e, ao juntar todos os bytes com uma concatenação básica, obtemos a senha e capturamos a flag.
