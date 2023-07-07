@@ -43,11 +43,11 @@ O programa espera um arquivo como argumento e com um filtro do nome 'flag' e o n
 
 Uma busca rápida com nosso amigo Gepeto e encontramos:
 
-<img src="Explain.png">
+<img src="imgaes/Explain.png">
 
 O gepeto deu uma breve explicada, agora vamos entender como funciona. O código C está executando o nosso arquivo flag com o comando ./anti_flag_reader flag passa pelos filtros e retorna "Nice try, but I refuse to give you the flag!" mas e se passarmos o caminho de outro arquivo?
 
-<img src="FirstTest.png">
+<img src="imgaes/FirstTest.png">
 
 Certo, então conseguimos ler arquivos de outros diretórios, mas onde isso se liga a Symlink race?
 
@@ -55,13 +55,13 @@ Enquanto o binário é executado com a flag de parametro, o binário mantém ele
 
 Vamos Executar o binário com o nosso arquivo de teste e deixar ele quietinho por enquanto. 
 
-<img src="Symbollink.png">
+<img src="imgaes/Symbollink.png">
 
 Certo, vamos entender esses 2 comandos. 
 
 ln -s <arquivo_original> <link_simbolico> - O comando ln -s gera um link simbólico onde o primero parametro é o caminho do arquivo e o segundo é o que está sendo executado pelo nosso binário. Ou seja, na teoria removemos o arquivo ```teste``` e adicionamos uma nova base pra ele já que ele não foi removido. 
 
-<img src="Final.png">
+<img src="imgaes/Final.png">
 
 Então, quando apertamos enter ele puxa o arquivo da base /home/walk/flag ```Para leitura``` e /home/race/teste como link simbolico e finalmente capturamos a flag.
 
@@ -69,7 +69,7 @@ Então, quando apertamos enter ele puxa o arquivo da base /home/walk/flag ```Par
 
 Aqui temos um binário parecido com o anterior porém sem o time que tivemos anteriormente pra conseguirmos modificar o arquivo. Então novamente, vamos tentar ler arquivos de outras pastas
 
-<img src="run.png">
+<img src="imgaes/run.png">
 
 Mas agora não conseguiremos deixar o binário executando e ir manualmente então automatizamos essa tarefa com um script básico bash. A idéia e fazer ele executar infinitamente a criação, o link simbólico e depois remover o arquivo.
 
@@ -86,11 +86,11 @@ done
 
 Isso vai fazer a execução ser assincrona como o gepeto disse, porém na imensa maioria das vezes não vamos conseguir de primeira por conta do loop. Vamos para a POC
 
-<img src="loop.png">
+<img src="imgaes/loop.png">
 
 Análisando mais um pouco do script bash acima, conseguimos ver que o arquivo criado tem o nome de test, será o arquivo que vamos usar dentro do binário.
 
-<img src="RunFinal.png">
+<img src="imgaes/RunFinal.png">
 
 Então temos a cena perfeita um script rodando em loop e um binário sendo executado, ambos não sincronos. Passamos o arquivo que o script bash gerou algumas vezes até dar o time perfeito e capturarmos a flag.
 
@@ -228,14 +228,14 @@ conn.close()
 
 Então codamos um exploit base usando a biblioteca pwntools do python. O código é bem simples, enviamos em bytes um pedido de deposito, depois enviamos o pedido de compra e recebemos a flag.
 
-<img src="SprintFirstStep.png">
+<img src="imgaes/SprintFirstStep.png">
 
 O nosso script python tem 2 erros. Como se trata de Race condition precisamos de todas ações em paralelo, isso nos obriga a usar Threads do python, o segundo erro é que estamos tendo uma mensagem dizendo que o pwntools está tendo problemas então precisamos usar socket para se conectar ao servidor. Mais uma vez solicitaremos o auxilio do nosso amigo Gepeto
 
-<img src="SecondStep.png">
+<img src="imgaes/SecondStep.png">
 
 
-<img src="Execute.png">
+<img src="imgaes/Execute.png">
 
 Primeiro obstaculo, como estamos trabalhando com threads e é um race condition, precisamos instanciar socket em todas as threads e colocar em loop:
 
