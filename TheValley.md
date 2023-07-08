@@ -73,7 +73,6 @@ Vamos voltar do inicio, temos também uma porta 22 com ssh aberta. Os desenvolve
 <img src="images/flag.png">
 
 
-<img src="images/loopou.png">
 
 Pra escalar para o usuário valley, encontramos um arquivo valleyAuthenticator. Tive a ideia genial de tentar ler o conteúdo de um binário e loopou. Vamos tentar ler o conteúdo do binário usando o mesmo comando que usamos pra ler os arquivos pncap.
 
