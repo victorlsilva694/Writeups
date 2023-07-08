@@ -123,11 +123,9 @@ Agora sabemos que a máquina tem python instalado e podemos filtrar o retorno da
 ```find / -writable  2>/dev/null | grep 'python'``` 
 
 <img src="images/base64.png">
-<img src="images/revShell.png">
 
 Agora voltamos ao diretorio Photos em que temos a permissão de valleyAdmin para executar o arquivo python e acessar o root
 
-<img src="images/shellFinal.png">
 
 importamos a lib os do python e executamos um bash command porém diferente das revShells que colocamos o ip da máquina como escopo, dessa vez colocamos o ip do THM. Isso vai permitir que ao abrir a porta com netcat, conseguimos nos conectar com o root.
 
