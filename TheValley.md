@@ -63,8 +63,6 @@ Conseguimos entrar no FTP, agora vamos escalar pra possiveis arquivos indicadore
 Achamos 3 arquivos. Dentro de uma conexão FTP, não conseguimos ler arquivos então usamos o comando ```get``` que faz um download dos arquivos para a pasta raiz do nosso S.O
 
 
-<img src="images/strings1.png">
-
 Os arquivos são binários de pacotes de rede que podem ser lidos por wireshark. Como queremos informações, análisar pacotes usando wireshark e na retornando a url pós login, dizia pra não repetir credenciais. Temos motivos pra achar que esses arquivos pncap possuem credenciais. 
 
 <img src="images/sshlogin.png">
