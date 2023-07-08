@@ -129,7 +129,6 @@ Agora voltamos ao diretorio Photos em que temos a permissão de valleyAdmin para
 
 importamos a lib os do python e executamos um bash command porém diferente das revShells que colocamos o ip da máquina como escopo, dessa vez colocamos o ip do THM. Isso vai permitir que ao abrir a porta com netcat, conseguimos nos conectar com o root.
 
-<img src="images/FlagValley.png">
 
 Tempo de conclusão da máquina: 8 horas.
 
