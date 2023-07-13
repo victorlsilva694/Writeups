@@ -6,7 +6,7 @@ Quando conseguimos um binário para fazer reverse, a primeira tarefa e a mais co
 
 <img src="images/0x41hazStrings.png">
 
-Como Vimos acima, temos 2 strings separadas. Nesse caso vamos tentar ler os bytes dessas strings e temos 2@@25$gf - sT&@.
+Como Vimos acima, temos 2 strings separadas. Nesse caso vamos tentar ler os bytes dessas strings e temos 2@@25$gf - sT&@ L.
 
 Para não perder a graça deixo uma dica - Veja o código com Decompile 
 
